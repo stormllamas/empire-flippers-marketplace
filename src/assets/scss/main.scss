@@ -1,0 +1,57 @@
+// @import "utilities";
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  width: 16rem;
+  padding-top: 1.25rem;
+  background: rgb(34, 34, 34);
+
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.5rem;
+  }
+
+  .link-item {
+    color: rgb(255, 255, 255);
+
+    .parent {
+      border-color: rgb(245, 166, 34);
+    }
+  }
+}
+
+.notification-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  background-color: #000000;
+
+  & > i {
+    font-size: 23.2px;
+  }
+}
+
+.ef-logo {
+  height: 60px;
+}
+
+@media (max-width: 899px) {
+  .section-icons {
+    .card-panel {
+      img {
+        max-height: 12vw;
+        min-height: 100px;
+      }
+    }
+  }
+}
