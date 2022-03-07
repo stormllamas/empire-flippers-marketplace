@@ -1,4 +1,4 @@
-// @import "utilities";
+@import "utilities";
 
 .sidebar {
   position: fixed;
@@ -17,12 +17,101 @@
     padding-left: 1.25rem;
     padding-right: 1.5rem;
   }
+}
 
-  .link-item {
+.link-items {
+  color: rgb(255, 255, 255);
+
+  .parent {
+    position: relative;
+    cursor: pointer;
     color: rgb(255, 255, 255);
 
-    .parent {
-      border-color: rgb(245, 166, 34);
+    .icon {
+      font-size: 20px;
+      color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 56px;
+      margin-left: 4px;
+    }
+
+    .text {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 32px;
+
+      span {
+        width: 100%;
+        font-size: 0.93rem;
+        line-height: 2.25rem;
+        font-weight: 600;
+      }
+    }
+
+    &.active {
+      * {
+        color: #f5a622;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 4px;
+        background-color: #f5a622;
+        color: #f5a622;
+      }
+    }
+  }
+
+  .link-item-group {
+    height: 200px;
+    transition: all 0.25s ease-in-out;
+    overflow: hidden;
+
+    &.closed {
+      height: 0px !important;
+    }
+
+    .child {
+      position: relative;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      font-size: 0.93rem;
+      font-weight: 600;
+      line-height: 2.5rem;
+      padding-left: 60px;
+
+      &.active,
+      &:hover {
+        .text {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .text {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 32px;
+      min-height: 40px;
+      color: #909696;
+      transition: all 0.15s ease-in-out;
+
+      span {
+        width: 100%;
+        font-size: 0.93rem;
+        line-height: 2.25rem;
+        font-weight: 600;
+      }
     }
   }
 }
@@ -43,6 +132,12 @@
 
 .ef-logo {
   height: 60px;
+}
+
+.sidebar-divider {
+  margin: 2.25rem 1.25rem;
+  height: 0.1rem;
+  background-color: rgb(102, 107, 112);
 }
 
 @media (max-width: 899px) {

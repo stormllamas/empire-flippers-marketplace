@@ -1,7 +1,8 @@
-import { SITE_LOADING } from "../actions/types";
+import { SITE_LOADING, SET_OPEN_LINK_ITEM } from "../actions/types";
 
 const initialState = {
   siteLoading: true,
+  openLinkItem: "",
 };
 
 export default (state = initialState, action) => {
@@ -10,6 +11,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         siteLoading: true,
+      };
+
+    case SET_OPEN_LINK_ITEM:
+      return {
+        ...state,
+        openLinkItem:
+          state.openLinkItem !== action.payload ? action.payload : "",
       };
 
     default:

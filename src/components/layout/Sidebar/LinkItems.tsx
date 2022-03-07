@@ -1,25 +1,18 @@
-import React, { Fragment } from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
+import LinkItemParent from "./LinkItemParent";
+import LinkItemGroup from "./LinkItemGroup";
 
-const LinkItems = () => {
-  return (
-    <div className="link-item">
-      <div className="top-section">
-        <Link to="/marketplace">
-          <img
-            src={require("../../assets/img/ef-logo-white2x.png")}
-            alt="Empire Flippers Logo"
-            className="ef-logo"
-          />
-        </Link>
-        <div className="notification-button" style={{ marginTop: "0.5rem" }}>
-          <i className="far fa-bell text-white" title="Notifications"></i>
-        </div>
-      </div>
-    </div>
-  );
+interface IListItems {
+  children:
+    | ReactElement<typeof LinkItemParent>[]
+    | ReactElement<typeof LinkItemGroup>[];
+}
+
+const LinkItems = ({ children }: IListItems) => {
+  return <div className="link-items">{children}</div>;
 };
 
 export default connect()(LinkItems);

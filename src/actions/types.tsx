@@ -1,1 +1,2 @@
 export const SITE_LOADING = "SITE_LOADING";
+export const SET_OPEN_LINK_ITEM = "SET_OPEN_LINK_ITEM";

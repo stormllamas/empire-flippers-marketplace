@@ -3,7 +3,8 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Sidebar from "./components/layout/Sidebar/Sidebar";
+// import Sidebar from "./components/layout/Sidebar/Sidebar";
+import MarketPlace from "./components/MarketPlace";
 import "./assets/scss/main.scss";
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
       <Fragment>
         <Router>
           <Routes>
-            <Route path="/marketplace" element={<Sidebar />} />
+            <Route path="/marketplace" element={<MarketPlace />} />
           </Routes>
         </Router>
       </Fragment>
