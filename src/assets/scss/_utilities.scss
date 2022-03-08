@@ -5,3 +5,48 @@
 .pointer {
   cursor: pointer;
 }
+
+.content-container {
+  padding-left: 16rem;
+}
+
+.ef-input {
+  appearance: none;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  min-width: 0px;
+  padding: 0px 0px 0px 1.4rem;
+  height: 2.75rem;
+  font-size: 1rem;
+  font-family: Lato, sans-serif;
+  transition: all 0.2s ease 0s;
+  color: #91979e;
+  border: 0px;
+  border-radius: 0.25rem;
+  box-shadow: transparent 0px 0px 0px 0px,
+    rgb(179, 188, 201) 0px 0px 0px 1px inset;
+
+  &:focus {
+    box-shadow: rgb(60, 121, 203) 0px 0px 0px 1px inset;
+    border: rgb(60, 121, 203);
+    outline: none;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.loading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.divider {
+  height: 1px;
+  margin: 0.75rem -1.75rem 0.75rem -1.5rem;
+  background: rgb(228, 231, 237);
+}

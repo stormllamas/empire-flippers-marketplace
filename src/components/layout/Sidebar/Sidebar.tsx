@@ -8,8 +8,6 @@ import LinkItemGroup from "./LinkItemGroup";
 import LinkItemChild from "./LinkItemChild";
 
 const Sidebar = () => {
-  const [openLinkItem, setOpenLinkItem] = useState("Marketplace");
-
   return (
     <div className="sidebar" style={{ backgroundColor: "#222" }}>
       <div className="top-section">

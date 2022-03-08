@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MarketPlace from "./components/MarketPlace";
 import "./assets/scss/main.scss";
 
+import { getListings } from "./actions/listingActions";
+
 const App = () => {
   return (
     <Provider store={store}>
