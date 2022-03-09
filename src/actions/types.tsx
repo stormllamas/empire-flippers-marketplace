@@ -1,2 +1,8 @@
+// Site
 export const SITE_LOADING = "SITE_LOADING";
 export const SET_OPEN_LINK_ITEM = "SET_OPEN_LINK_ITEM";
+
+// LISTINGS
+export const LOADING_LISTINGS = "LOADING_LISTINGS";
+export const GET_LISTINGS = "GET_LISTINGS";
+export const SET_SORT_VALUE = "SET_SORT_VALUE";

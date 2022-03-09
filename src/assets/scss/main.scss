@@ -397,3 +397,47 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.pagination {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  z-index: 10;
+  bottom: 0px;
+  right: 0px;
+  width: calc(100vw - 16rem);
+  background: white;
+  border-top: 1px solid rgb(235, 239, 241);
+  padding: 0.75rem 1.5rem;
+
+  .ellipsis {
+    color: rgb(152, 159, 168);
+  }
+
+  .page-item {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-width: 1.75rem;
+    height: 1.75rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    color: rgb(152, 159, 168);
+    border: 1px solid rgb(211, 219, 231);
+    border-radius: 0.25rem;
+
+    &.active,
+    &:hover {
+      color: #fff;
+      background-color: rgb(60, 121, 203);
+      border: 1px solid rgb(60, 121, 203);
+      border-radius: 0.25rem;
+    }
+  }
+}

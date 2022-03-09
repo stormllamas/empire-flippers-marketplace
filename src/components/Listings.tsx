@@ -14,12 +14,8 @@ interface IListings {
 const Listings = ({
   listings: { listingsLoading, listings, count, limit, page, pages },
 }: IListings) => {
-  useEffect(() => {
-    console.log("listings", listings);
-  }, [listings]);
-
   return listings && listings.length > 0 && !listingsLoading ? (
-    <div className="listings">
+    <div className="listings" style={{ paddingBottom: "5rem" }}>
       {listings.map((listing: any) => (
         <div key={listing.id} className="listing">
           <div className="row">
@@ -60,15 +56,19 @@ const Listings = ({
                 </div>
                 <div className="monetizations">
                   <img
-                    src={`https://api.empireflippers.com/monetizations-white/${listing.monetizations[0].monetization
-                      .replace(" ", "-")
-                      .toLowerCase()}.svg`}
+                    src={`https://api.empireflippers.com/monetizations-white/${
+                      listing.monetizations[0] &&
+                      listing.monetizations[0].monetization
+                        .replace(" ", "-")
+                        .toLowerCase()
+                    }.svg`}
                     alt=""
                   />
                   <div className="d-flex align-items-center pl-3 pt-2">
                     {listing.monetizations.map(
                       (monetization: any, index: number) => (
                         <pre
+                          key={monetization.monetization}
                           style={{
                             marginBottom: 0,
                             fontFamily: "Lato",
@@ -93,7 +93,9 @@ const Listings = ({
                     0,
                     240
                   )}...`}</p>
-                  <a href="javascript:void(0)">Read More</a>
+                  <a href="" onClick={() => {}}>
+                    Read More
+                  </a>
                 </>
               ) : (
                 <p className="mb-1">{listing.summary}</p>
@@ -104,7 +106,10 @@ const Listings = ({
           <div className="row mt-2">
             <div style={{ width: "20%" }}>
               <p className="text-muted mb-1">Listing #</p>
-              <p className="text-muted mb-0">{listing.listing_number}</p>
+              <p className="text-muted mb-0">
+                #{listing.listing_number}
+                {">"}
+              </p>
             </div>
             <div style={{ width: "20%" }}>
               <p className="text-muted mb-1">Price</p>

@@ -1,4 +1,4 @@
-import { SET_OPEN_LINK_ITEM } from "./type";
+import { SET_OPEN_LINK_ITEM } from "./types";
 import type { RootState, AppDispatch } from "../store";
 
 export const setOpenLinkItem =

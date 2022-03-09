@@ -1,4 +1,8 @@
-import { GET_LISTINGS, LOADING_LISTINGS } from "../actions/type";
+import {
+  GET_LISTINGS,
+  LOADING_LISTINGS,
+  SET_SORT_VALUE,
+} from "../actions/types";
 
 const initialState = {
   listingsLoading: true,
@@ -8,6 +12,8 @@ const initialState = {
   limit: null,
   page: null,
   pages: null,
+
+  sortValue: null,
 };
 
 export default (state = initialState, action) => {
@@ -27,6 +33,12 @@ export default (state = initialState, action) => {
         page: action.payload.page,
         pages: action.payload.pages,
         listingsLoading: false,
+      };
+
+    case SET_SORT_VALUE:
+      return {
+        ...state,
+        sortValue: action.payload,
       };
 
     default:

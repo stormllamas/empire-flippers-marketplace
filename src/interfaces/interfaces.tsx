@@ -15,4 +15,5 @@ export interface ListingsState {
   limit: number;
   page: number;
   pages: number;
+  sortValue: string;
 }

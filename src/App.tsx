@@ -15,7 +15,10 @@ const App = () => {
       <Fragment>
         <Router>
           <Routes>
-            <Route path="/marketplace" element={<MarketPlace />} />
+            <Route
+              path="/marketplace/:format/:page"
+              element={<MarketPlace />}
+            />
           </Routes>
         </Router>
       </Fragment>

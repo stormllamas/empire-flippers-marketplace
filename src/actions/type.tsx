@@ -1,6 +1,0 @@
-// Site
-export const SET_OPEN_LINK_ITEM = "SET_OPEN_LINK_ITEM";
-
-// LISTINGS
-export const LOADING_LISTINGS = "LOADING_LISTINGS";
-export const GET_LISTINGS = "GET_LISTINGS";
